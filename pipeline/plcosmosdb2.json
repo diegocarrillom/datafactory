@@ -1,5 +1,5 @@
 {
-	"name": "CopyPipeline_ymq",
+	"name": "plcosmosdb2",
 	"properties": {
 		"activities": [
 			{
