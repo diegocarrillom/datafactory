@@ -85,17 +85,8 @@
 					"SqlServer1_connectionString": {
 						"value": "[parameters('SqlServer1_connectionString')]"
 					},
-					"linkedCSVFourthCoffee_password": {
-						"value": "[parameters('linkedCSVFourthCoffee_password')]"
-					},
 					"linkeddatalake_properties_typeProperties_url": {
 						"value": "[parameters('linkeddatalake_properties_typeProperties_url')]"
-					},
-					"linkedCSVFourthCoffee_properties_typeProperties_host": {
-						"value": "[parameters('linkedCSVFourthCoffee_properties_typeProperties_host')]"
-					},
-					"linkedCSVFourthCoffee_properties_typeProperties_userId": {
-						"value": "[parameters('linkedCSVFourthCoffee_properties_typeProperties_userId')]"
 					}
 				}
 			},
@@ -114,6 +105,15 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"linkedCSVFourthCoffee_password": {
+						"value": "[parameters('linkedCSVFourthCoffee_password')]"
+					},
+					"linkedCSVFourthCoffee_properties_typeProperties_host": {
+						"value": "[parameters('linkedCSVFourthCoffee_properties_typeProperties_host')]"
+					},
+					"linkedCSVFourthCoffee_properties_typeProperties_userId": {
+						"value": "[parameters('linkedCSVFourthCoffee_properties_typeProperties_userId')]"
 					}
 				}
 			},
