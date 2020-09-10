@@ -1,0 +1,35 @@
+{
+	"name": "SourceDataset_hx5",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedCSVFourthCoffee",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation",
+				"fileName": "MovieActors.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "MovieActorID",
+				"type": "String"
+			},
+			{
+				"name": "MovieID",
+				"type": "String"
+			},
+			{
+				"name": "ActorID",
+				"type": "String"
+			}
+		]
+	}
+}
