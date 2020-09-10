@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
 		},
+		"linkedCSVFourthCoffee_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'linkedCSVFourthCoffee'"
+		},
 		"linkedSales_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'linkedSales'"
@@ -26,6 +30,14 @@
 		"linkedstreaming_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'linkedstreaming'"
+		},
+		"linkedCSVFourthCoffee_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "C:\\Rentals"
+		},
+		"linkedCSVFourthCoffee_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "openhackadmin"
 		},
 		"linkeddatalake_properties_typeProperties_url": {
 			"type": "string",
@@ -73,12 +85,41 @@
 					"SqlServer1_connectionString": {
 						"value": "[parameters('SqlServer1_connectionString')]"
 					},
+					"linkedCSVFourthCoffee_password": {
+						"value": "[parameters('linkedCSVFourthCoffee_password')]"
+					},
 					"linkeddatalake_properties_typeProperties_url": {
 						"value": "[parameters('linkeddatalake_properties_typeProperties_url')]"
+					},
+					"linkedCSVFourthCoffee_properties_typeProperties_host": {
+						"value": "[parameters('linkedCSVFourthCoffee_properties_typeProperties_host')]"
+					},
+					"linkedCSVFourthCoffee_properties_typeProperties_userId": {
+						"value": "[parameters('linkedCSVFourthCoffee_properties_typeProperties_userId')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "dfcarrillo_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'dfcarrillo_ArmTemplate_0')]"
+			]
 		}
 	]
 }
