@@ -82,9 +82,6 @@
 					"linkedstreaming_connectionString": {
 						"value": "[parameters('linkedstreaming_connectionString')]"
 					},
-					"SqlServer1_connectionString": {
-						"value": "[parameters('SqlServer1_connectionString')]"
-					},
 					"linkeddatalake_properties_typeProperties_url": {
 						"value": "[parameters('linkeddatalake_properties_typeProperties_url')]"
 					}
@@ -105,6 +102,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"SqlServer1_connectionString": {
+						"value": "[parameters('SqlServer1_connectionString')]"
 					},
 					"linkedCSVFourthCoffee_password": {
 						"value": "[parameters('linkedCSVFourthCoffee_password')]"
